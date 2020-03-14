@@ -82,7 +82,10 @@ module.exports = {
       files: ['**/*.ts'],
       parser: '@typescript-eslint/parser',
       parserOptions: {
-        project: './tsconfig.json',
+        project: [
+          './tsconfig.json',
+          './tests/tsconfig.json',
+        ],
         ecmaVersion: 2020,
       },
       "settings": {

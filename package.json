@@ -20,7 +20,7 @@
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig.build.json",
     "build:prod": "npm run build",
-    "lint": "eslint --ext .js,.ts src/**",
+    "lint": "eslint --ext .js,.ts ./{src,tests}/**/*.ts",
     "lint:fix": "npm run lint -- --fix",
     "pre-push": "npm run lint && npm run test && npm run build:prod && npm run tpl-repo:check",
     "preinstall": "node ./tools/check-yarn.js",
@@ -36,6 +36,7 @@
     "@babel/preset-env": "~7.7.6",
     "@babel/preset-typescript": "~7.7.4",
     "@types/jest": "~25.1.0",
+    "@types/node": "^13.9.1",
     "@typescript-eslint/eslint-plugin": "~2.14.0",
     "@typescript-eslint/parser": "~2.14.0",
     "eslint": "~6.8.0",

@@ -38,7 +38,7 @@ Add `api-entity-ref` to the plugins section of your `.eslintrc` configuration fi
 {
   "plugins": ["api-entity-ref"],
   "rules": {
-    "api-entity-ref/decorator": "error"
+    "api-entity-ref/check-class-decorator": "error"
   }
 }
 ```
@@ -68,23 +68,23 @@ Or enable the ruleset via the `extends` property of your `.eslintrc` configurati
 
 ### How to make a build
 
-`npm run build`
+`yarn run build`
 
 ### How to run lint
 
-* Just show problems `npm run lint`
-* Fix problems if it is possible `npm run lint:fix`
+* Just show problems `yarn run lint`
+* Fix problems if it is possible `yarn run lint:fix`
 
 ### How to run tests
 
 * All tests
 
-  `npm run test`  
-  `npm run test:watch`
+  `yarn run test`  
+  `yarn run test:watch`
 * Specific tests
 
-  `npm run test -- src/my.spec.ts`  
-  `npm run test:watch -- src/my.spec.ts`
+  `yarn run test -- src/my.spec.ts`  
+  `yarn run test:watch -- src/my.spec.ts`
 
 ## Author
 

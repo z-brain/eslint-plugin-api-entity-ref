@@ -13,7 +13,6 @@
     "moduleResolution": "node",
     "noEmitHelpers": true,
     "removeComments": true,
-    "sourceMap": true,
     "strict": true,
     "target": "es2019",
     "typeRoots": [
@@ -21,11 +20,10 @@
     ],
     "types": [
       "jest",
-      "jest-extended"
+      "jest-extended",
+      "node"
     ],
-    "outDir": "./dist",
-    "baseUrl": "./src",
-    "rootDir": "./src"
+    "outDir": "./dist"
   },
   "include": [
     "src/**/*.ts"

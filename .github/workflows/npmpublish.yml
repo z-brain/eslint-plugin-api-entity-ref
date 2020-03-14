@@ -42,7 +42,8 @@ jobs:
           name: dist
       - name: Set GIT username & email
         run: git config --global user.name 'GIT Workflow CI' && git config --global user.email dev@korniychuk.pro
-      - run: yarn version --patch -m 'Update package version version to %s'
+      - name: Update package patch version
+        run: npm version patch -m 'Update package version version to %s'
       - name: Generate public package.json
         run: yarn run gen-public-package.json
       - name: Generate public README.md
@@ -52,6 +53,6 @@ jobs:
         env:
           NPM_TOKEN: ${{secrets.npm_token}}
       - name: Publishing NPM Package
-        run: yarn publish dist && echo "Successfully released version ${npm_package_version}!"
-      - name: Pushing new commit && tag to git repository
+        run: npm publish dist --access public && echo "Successfully released version $(node -p "require('./package.json').version")!"
+      - name: Pushing new commit && tag to the git repo
         run: git push --no-verify && git push --tags --no-verify

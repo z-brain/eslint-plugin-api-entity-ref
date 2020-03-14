@@ -4,15 +4,26 @@
 
 # @z-brain/eslint-plugin-api-entity-ref
 
-[![npm version](https://img.shields.io/npm/v/eslint-plugin-functional.svg?style=flat)](https://www.npmjs.com/package/eslint-plugin-functional)
-[![travis build](https://travis-ci.com/jonaskello/eslint-plugin-functional.svg?branch=master&amp;style=flat)](https://travis-ci.com/jonaskello/eslint-plugin-functional)
-[![Coverage Status](https://codecov.io/gh/jonaskello/eslint-plugin-functional/branch/master/graph/badge.svg)](https://codecov.io/gh/jonaskello/eslint-plugin-functional)
-[![MIT license](https://img.shields.io/github/license/jonaskello/eslint-plugin-functional.svg?style=flat)](https://opensource.org/licenses/MIT)
+<p>
+  <a target="_blank" href="https://github.com/z-brain/eslint-plugin-api-entity-ref/actions?query=workflow%3A%22Build%22">
+    <img alt="Build status" src="https://github.com/z-brain/eslint-plugin-api-entity-ref/workflows/Build/badge.svg">
+  </a>
+  <a target="_blank" href="https://www.npmjs.com/package/@z-brain/eslint-plugin-api-entity-ref">
+    <img alt="NPM version" src="https://img.shields.io/npm/v/@z-brain/eslint-plugin-api-entity-ref.svg">
+  </a>
+  <a target="_blank" href="https://codecov.io/gh/@z-brain/eslint-plugin-api-entity-ref">
+    <img alt="Code Coverage" src="https://codecov.io/gh/@z-brain/eslint-plugin-api-entity-ref/branch/master/graph/badge.svg">
+  </a>
+  <a target="_blank" href="https://www.gnu.org/licenses/gpl-3.0">
+    <img alt="License: GPL v3" src="https://img.shields.io/badge/License-GPLv3-blue.svg">
+  </a>
+</p>
 
 An [ESLint](http://eslint.org) plugin to disable to check that you didn't forget to add `ApiEntityRef` decorator from [`@z-brain/api-entity-ref`](https://github.com/z-brain/api-entity-ref) to your classes with `ApiPropertyRef` decorators.
 
 </div>
 
+---
 
 *Notice: If you have any propositions feel free to make an issue or create a pull request.*
 

@@ -56,3 +56,5 @@ jobs:
         run: npm publish dist --access public && echo "Successfully released version $(node -p "require('./package.json').version")!"
       - name: Pushing new commit && tag to the git repo
         run: git push --no-verify && git push --tags --no-verify
+      - name: Upload coverage to codecov.io
+        run: bash <(curl -s https://codecov.io/bash)

@@ -1,57 +1,61 @@
-# Modern Wallaby JS Starter (TypeScript + Babel + Jest)
+<div align="center">
+
+![eslint-logo](docs/assets/eslint-logo.svg?sanitize=true)
+
+# @z-brain/eslint-plugin-api-entity-ref
+
+[![npm version](https://img.shields.io/npm/v/eslint-plugin-functional.svg?style=flat)](https://www.npmjs.com/package/eslint-plugin-functional)
+[![travis build](https://travis-ci.com/jonaskello/eslint-plugin-functional.svg?branch=master&amp;style=flat)](https://travis-ci.com/jonaskello/eslint-plugin-functional)
+[![Coverage Status](https://codecov.io/gh/jonaskello/eslint-plugin-functional/branch/master/graph/badge.svg)](https://codecov.io/gh/jonaskello/eslint-plugin-functional)
+[![MIT license](https://img.shields.io/github/license/jonaskello/eslint-plugin-functional.svg?style=flat)](https://opensource.org/licenses/MIT)
+
+An [ESLint](http://eslint.org) plugin to disable to check that you didn't forget to add `ApiEntityRef` decorator from [`@z-brain/api-entity-ref`](https://github.com/z-brain/api-entity-ref) to your classes with `ApiPropertyRef` decorators.
+
+</div>
+
 
 *Notice: If you have any propositions feel free to make an issue or create a pull request.*
 
-## Features
+## Installation
 
-* Wallaby JS works out of the box without any additional config  
-  Notice: How to run in "Without Configuration" mode ([Official Wallaby JS Guide](https://wallabyjs.com/docs/intro/config.html#automatic-configuration))
-* [ESLint](https://eslint.org) for linting JS & TS files ([TSLint is deprecated in 2019](https://github.com/palantir/tslint#tslint)). Basic rules configured.
-* Very strict linting [config](/src/.eslintrc.js) ([airbnb](https://www.npmjs.com/package/eslint-config-airbnb-base) + [unicorn](https://www.npmjs.com/package/eslint-plugin-unicorn) + [some other plugins](/src/.eslintrc.js#L11))
-* Unit Testing via [Jest](https://jestjs.io/) 24+
-* Additional Jest matchers from [`jest-extended`](https://github.com/jest-community/jest-extended) configured
-* [TypeScript](http://typescriptlang.org/) 3.7+ via [Babel](https://babeljs.io/docs/en/babel-preset-typescript)
-* Yarn for packages installation and [`check-yarn`](/tools/check-yarn.js) utility to prevent packages installation via `npm`
-* [`.nvmrc`](https://github.com/nvm-sh/nvm#nvmrc)
-* Nothing platform related. This repository template can be used for NodeJS and for Browser development.
-* Git hooks via [husky](https://www.npmjs.com/package/husky)
-* [Utility](/tools/merge-with-repository-template.sh) to automatically pull updates from this template repository (`npm run tpl-repo:merge`)
 
-## Ways to use
+```sh
+# Install with npm
+npm install eslint eslint-plugin-functional --save-dev
 
-1. Clone as is
+# Install with yarn
+yarn add -D eslint eslint-plugin-functional
+```
 
-    1. `git clone git@github.com:korniychuk/wallaby-ts-starter.git`
-    2. `cd wallaby-ts-starter`
-    3. `yarn`
-2. Fork
+**Note:** If you installed ESLint globally (using the `-g` flag with npm or `global` with yarn) then you must also install `eslint-plugin-functional` globally.
 
-    0. Click **Fork** git button
-    1. `git clone git@github.com:YOUR_GIT_NAME/wallaby-ts-starter.git`
-    2. `cd wallaby-ts-starter`
-    3. `yarn`
-3. Creating from template
 
-    0. Click **Fork** git button
-    1. Create new repository and specify template ![template](./resources/readme.git-create-from-template.png)
-    1. `git clone git@github.com:YOUR_GIT_NAME/NEW_REPOSITORY_NAME.git`
-    2. `cd NEW_REPOSITORY_NAME`
-    3. `yarn`
-4. Using with already cloned repository as an additional origin for pulling updates
+## Usage
 
-    1. Automatically
-    
-       ```bash
-       npm run merge-tpl-repo
-       ```
-    
-    2. Manually
+Add `api-entity-ref` to the plugins section of your `.eslintrc` configuration file. Then configure the rules you want to use under the rules section.
 
-        1. `git remote add template git@github.com:korniychuk/wallaby-ts-starter.git`
-        2. `git fetch template`
-        3. `git merge --allow-unrelated-histories template/master`
+```jsonc
+{
+  "plugins": ["api-entity-ref"],
+  "rules": {
+    "api-entity-ref/decorator": "error"
+  }
+}
+```
 
-## How to
+Or enable the ruleset via the `extends` property of your `.eslintrc` configuration file.  
+   
+```jsonc
+{
+ // ...
+ "extends": [
+   "plugin:api-entity-ref/recommended"
+ ]
+}
+```
+
+
+## Dev Notes
 
 ### How to use NodeJS version from the `.nvmrc`
 
@@ -60,7 +64,7 @@
 
     * Execute `nvm use` in the project root directory
     * Install [NVM Loader](https://github.com/korniychuk/ankor-shell) and your .nvmrc will be loaded automatically when you open the terminal.
-      ![NVM Loader demo](./resources/readme.nvm-loader.png)
+      ![NVM Loader demo](docs/assets/readme.nvm-loader.png)
 
 ### How to make a build
 

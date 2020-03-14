@@ -11,8 +11,8 @@
   <a target="_blank" href="https://www.npmjs.com/package/@z-brain/eslint-plugin-api-entity-ref">
     <img alt="NPM version" src="https://img.shields.io/npm/v/@z-brain/eslint-plugin-api-entity-ref.svg">
   </a>
-  <a target="_blank" href="https://codecov.io/gh/@z-brain/eslint-plugin-api-entity-ref">
-    <img alt="Code Coverage" src="https://codecov.io/gh/@z-brain/eslint-plugin-api-entity-ref/branch/master/graph/badge.svg">
+  <a target="_blank" href="https://codecov.io/gh/z-brain/eslint-plugin-api-entity-ref">
+    <img alt="Code Coverage" src="https://codecov.io/gh/z-brain/eslint-plugin-api-entity-ref/branch/master/graph/badge.svg">
   </a>
   <a target="_blank" href="https://www.gnu.org/licenses/gpl-3.0">
     <img alt="License: GPL v3" src="https://img.shields.io/badge/License-GPLv3-blue.svg">

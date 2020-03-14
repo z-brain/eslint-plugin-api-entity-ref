@@ -32,13 +32,13 @@ An [ESLint](http://eslint.org) plugin to disable to check that you didn't forget
 
 ```sh
 # Install with npm
-npm install eslint eslint-plugin-functional --save-dev
+npm install eslint eslint-plugin-api-entity-ref --save-dev
 
 # Install with yarn
-yarn add -D eslint eslint-plugin-functional
+yarn add -D eslint eslint-plugin-api-entity-ref
 ```
 
-**Note:** If you installed ESLint globally (using the `-g` flag with npm or `global` with yarn) then you must also install `eslint-plugin-functional` globally.
+**Note:** If you installed ESLint globally (using the `-g` flag with npm or `global` with yarn) then you must also install `eslint-plugin-api-entity-ref` globally.
 
 
 ## Usage

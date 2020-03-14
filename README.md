@@ -55,7 +55,7 @@ Or enable the ruleset via the `extends` property of your `.eslintrc` configurati
 ```
 
 
-## Dev Notes
+## Development notes
 
 ### How to use NodeJS version from the `.nvmrc`
 
@@ -85,6 +85,21 @@ Or enable the ruleset via the `extends` property of your `.eslintrc` configurati
 
   `yarn run test -- src/my.spec.ts`  
   `yarn run test:watch -- src/my.spec.ts`
+
+### How to build and publish NPM package
+
+*NPM Token:* `806f...5e2e`
+
+CI configuration details here: [.github/workflows/npmpublish.yml](.github/workflows/npmpublish.yml)
+
+```bash
+yarn run pre-push
+&& yarn version patch -m 'Update package version version to %s'
+&& yarn run gen-public-package.json
+&& cp README.md dist/
+&& yarn publish dist
+&& git push --no-verify && git push --tags --no-verify
+```
 
 ## Author
 

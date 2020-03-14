@@ -1,21 +1,22 @@
 {
-  "name": "wallaby-ts-webpack",
-  "description": "",
-  "license": "MIT",
-  "private": true,
+  "name": "@z-brain/eslint-plugin-api-entity-ref",
+  "description": "An ESLint plugin to disable to check that you didn't forget to add ApiEntityRef decorator from @z-brain/api-entity-ref to your classes with ApiPropertyRef decorators.",
+  "author": "Anton Korniychuk <dev@korniychuk.pro>",
+  "license": "GPL-3.0",
+  "private": false,
   "version": "1.0.0",
   "bugs": {
-    "url": "https://github.com/korniychuk/wallaby-ts-webpack-starter/issues"
+    "url": "https://github.com/z-brain/eslint-plugin-api-entity-ref/issues"
   },
-  "homepage": "https://github.com/korniychuk/wallaby-ts-webpack-starter#readme",
+  "homepage": "https://github.com/z-brain/eslint-plugin-api-entity-ref",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/korniychuk/wallaby-ts-webpack-starter.git"
+    "url": "git@github.com:z-brain/eslint-plugin-api-entity-ref.git"
   },
   "engines": {
-    "node": "^12.14.1",
-    "npm": "^6.13.4",
-    "yarn": "^1.21.1"
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0",
+    "yarn": ">=1.20.0"
   },
   "scripts": {
     "build": "rimraf dist && tsc -p tsconfig.build.json",
@@ -36,7 +37,7 @@
     "@babel/preset-env": "~7.7.6",
     "@babel/preset-typescript": "~7.7.4",
     "@types/jest": "~25.1.0",
-    "@types/node": "^13.9.1",
+    "@types/node": "~12.12.30",
     "@typescript-eslint/eslint-plugin": "~2.14.0",
     "@typescript-eslint/parser": "~2.14.0",
     "eslint": "~6.8.0",
